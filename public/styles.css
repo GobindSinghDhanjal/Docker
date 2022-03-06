@@ -1,0 +1,293 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
+.navbar{
+    background-color: #2496ed;
+    margin: 0;
+    padding: 10px 30px;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%; 
+    z-index: 10;
+}
+
+.navbar-logo img{
+    text-decoration: none;
+    padding-right: 2%;
+    margin-bottom: -6px;
+}
+
+
+.navbar ul{
+    display: inline;
+}
+
+.navbar li{
+    display: inline-block;
+    margin-right: 2%;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;
+}
+
+.search-box{
+    color: white;
+    background-color: #127aca;
+    font-weight: 500;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.search-icon{
+    margin-top: 0;
+    margin-bottom: -6px;
+}
+
+.search-box::placeholder{
+    color: white;
+}
+
+.search-box:focus{
+    outline: none;
+}
+
+.search-box-div{
+    display: inline-block;
+    color: white;
+    background-color: #127aca;
+    font-weight: 500;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.navbar-page-loc{
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #2496ed;
+    background-color: whitesmoke;
+    margin-top: 58px;
+    width: 100%;
+    padding: 1px 30px;
+    border-bottom: 1px solid #2496ed;
+    position: fixed;
+    z-index: 5;
+}
+
+.navbar-page-loc svg{
+    width: 0.75em;
+    margin-bottom: -5px;
+}
+
+/************** SIDEBAR ********************/
+
+.side-bar{
+    top:100;
+    background-color: whitesmoke;
+    width: 15%;
+    padding: 10px 10px 10px 0;
+    color: #2496ed;
+    font-size: 1em;
+    font-weight: 500;
+    position: sticky;
+    max-height: calc(100vh - 9rem);
+    overflow-y: auto;
+    float: left;
+    position: fixed;
+    margin-top: 110px;
+    z-index: 2;
+    height: 100%;
+    padding-bottom: 2%;
+}
+
+.side-bar ul{
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+.side-bar li{
+    display: block;
+    text-decoration: none;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    padding-left: -10%;
+}
+
+.side-bar li:hover{
+    color: #127aca;
+    background-color: rgb(226, 226, 226);
+}
+
+.side-bar li a{
+    padding-left: 6%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+.side-bar .active{
+    border-left: 5px solid #127aca;
+}
+
+.side-bar .active:hover{
+    border-color: #7bc6ff;
+}
+
+.side-bar a{
+    text-decoration: none;
+    color: #2496ed;
+}
+
+/********** CONTENT *************/
+
+.content{
+    width: auto;
+    padding-left: 19%;
+    padding-top: 100px;
+    padding-right: 5%;
+}
+
+h1{
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+small{
+    color: grey;
+    font-style: italic;
+}
+
+p{
+    font-size: 1em;
+}
+
+.mobile{
+    display: none;
+}
+
+.navbar a:hover{
+    border-bottom: 5px solid #7bc6ff;
+    padding-bottom: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+}
+
+.navbar .active{
+    border-bottom: 5px solid #7bc6ff;
+    padding-bottom: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 10px;
+}
+
+
+/*********** MEDIA QUERY********/
+
+@media (max-width: 999px){
+
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        display: inline-block;
+    }
+
+    .navbar{
+        padding: 5px 10px;
+    }
+
+    .side-bar .active{
+        border-left: none;
+    }
+
+    .navbar a{
+        position: absolute;
+    }
+
+    .mobile-navbar-logo{
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        padding-right: 20px;
+    }
+
+    .mobile-navbar-logo img{
+        padding-top: 8px;
+    }
+
+    .menu-icon svg{
+        position: absolute;
+        right: 40px;
+        top: 20px;
+        color: white;
+        font-size: 2em;
+    }
+
+    .search-box-div{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        margin-left: 55px;
+    }
+
+    .navbar-page-loc{
+        display: none;
+    }
+
+    .navbar ul{
+        display: none;
+    }
+
+    .side-bar {
+        background-color: whitesmoke;
+        width: auto;
+        padding: 10px;
+        color: #2496ed;
+        font-size: 1em;
+        font-weight: 500;
+        position: sticky;
+        float: none;
+        position:static;
+        margin-top: 0px;
+        z-index: 2;
+        height: 100%;
+        padding-bottom: 2%;
+    }
+
+    .content{
+        padding: 12% 10%;
+    }
+
+    h1{
+        font-size: 1.8em;
+    }
+
+    h2{
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+
+    p{
+        font-size: 0.9em;
+    }
+
+    .side-bar{
+        display: none;
+        position: fixed;
+        width: 100%;
+        top: 67px;
+        z-index: 15;
+        transition: all 0.1s ease-in-out;
+    }
+    
+}
